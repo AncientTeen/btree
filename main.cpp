@@ -13,6 +13,6 @@ int main() {
 
     print(tee,space);
     free_tree(tee);
-
+    /*balbla bla piskunov ochen krutoy pchel*/
     return 0;
 }
