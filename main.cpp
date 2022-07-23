@@ -2,18 +2,22 @@
 
 int main() {
 
-    tree_branch *tee = nullptr;
-    int s[] = {5, 8, 4, 1, 2, 10, 20};
+    btree_nodes bt;
+    //8, 5, 2, 6, 10, 9, 11
+    bt.insert(8);
+    bt.insert(5);
+    bt.insert(2);
+    bt.insert(6);
+    bt.insert(10);
+    bt.insert(9);
+    bt.insert(11);
 
-    int space = sizeof(s) / sizeof(s[0]);
 
-    for (int i = 0; i < space; i++) {
-        add_data(s[i], tee);
-    }
+    cout << "Tree from OP:\n\n";
+    bt.Dump();
+    cout << "\n\n";
 
-    print(tee,space);
-    free_tree(tee);
-    /*balbla bla piskunov ochen krutoy pchel*/
-    // hihihihihi
+
+
     return 0;
 }
