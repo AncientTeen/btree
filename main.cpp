@@ -3,20 +3,23 @@
 int main() {
 
     btree_nodes bt;
-    //8, 5, 2, 6, 10, 9, 11
-    bt.insert(8);
-    bt.insert(5);
-    bt.insert(2);
-    bt.insert(6);
-    bt.insert(10);
-    bt.insert(9);
-    bt.insert(11);
 
+    random_device rd;
+    mt19937 rng(rd());
 
-    cout << "Tree from OP:\n\n";
+    int MaxCount = 20;
+    int MaxDepth = 20;
+    const int Min = 1, Max = 1000;
+
+    uniform_int_distribution<int> dist(Min, Max);
+
+    while (MaxCount--) {
+        bt.insert(dist(rng));
+        if (bt.get_max_depth() >= MaxDepth) break;
+    }
+
+    cout << "Randomly generated tree:\n\n";
     bt.Dump();
-    cout << "\n\n";
-
 
 
     return 0;
